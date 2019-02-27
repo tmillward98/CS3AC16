@@ -1,0 +1,8 @@
+*____ERROR LOG - Starting from line 0____*
+[0]Inital Read: Invalid entry, passing line: 0
+[1]Inital Read: Invalid entry, passing line: 25
+[2]Inital Read: Invalid entry, passing line: 94
+[3]Inital Read: Invalid entry, passing line: 170
+[4]Inital Read: Invalid entry, passing line: 360
+[5]Inital Read: Invalid entry, passing line: 361
+[6]Executed in: 57ms.
