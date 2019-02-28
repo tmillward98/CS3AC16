@@ -1,8 +1,40 @@
 *____ERROR LOG - Starting from line 0____*
-[0]Inital Read: Invalid entry, passing line: 0
-[1]Inital Read: Invalid entry, passing line: 25
-[2]Inital Read: Invalid entry, passing line: 94
-[3]Inital Read: Invalid entry, passing line: 170
-[4]Inital Read: Invalid entry, passing line: 360
-[5]Inital Read: Invalid entry, passing line: 361
-[6]Executed in: 57ms.
+[0]Incorrect value: [﻿] should be in form XXXnnnnXXn.
+[1]Incorrect value: [MBw8071P] should be in form XXXnnnnX.
+[2]Incorrect value: [] should be in form XXXnnnnXXn.
+[3]Incorrect value: [UES915*GS7] should be in form XXXnnnnXXn.
+[4]Incorrect value: [GMO593[W] should be in form XXXnnnnX.
+[5]Incorrect value: [4QU6245R] should be in form XXXnnnnX.
+[6]Incorrect value: [] should be in form XXXnnnnXXn.
+[7]Incorrect value: [XXQ4064%] should be in form XXXnnnnX.
+[8]Incorrect value: [SJD87|76RZ0] should be in form XXXnnnnXXn.
+[9]Incorrect value: [[AS] should be in form XXX.
+[10]Incorrect value: [] should be in form XXXnnnnXXn.
+[11]Incorrect value: [CKZ313\BR9] should be in form XXXnnnnXXn.
+[12]Incorrect value: [A;S] should be in form XXX.
+[13]Incorrect value: [] should be in form XXXnnnnXXn.
+[14]Incorrect value: [VDCP164W] should be in form XXXnnnnX.
+[15]Incorrect value: [] should be in form XXXnnnnXXn.
+[16]Incorrect value: [AM%] should be in form XXX.
+[17]Incorrect value: [:IN] should be in form XXX.
+[18]Incorrect value: []RA] should be in form XXX.
+[19]Incorrect value: [] should be in form XXXnnnnXXn.
+[20]Incorrect value: [#MS] should be in form XXX.
+[21]Incorrect value: [WBE6935NU$] should be in form XXXnnnnXXn.
+[22]Incorrect value: [WYu2011YH2] should be in form XXXnnnnXXn.
+[23]Incorrect value: [MI^] should be in form XXX.
+[24]Incorrect value: [vAS] should be in form XXX.
+[25]Incorrect value: [OR8] should be in form XXX.
+[26]Incorrect value: [] should be in form XXXnnnnXXn.
+[27]Incorrect value: [SI|] should be in form XXX.
+[28]Incorrect value: [L}X] should be in form XXX.
+[29]Incorrect value: [PEe] should be in form XXX.
+[30]Incorrect value: [] should be in form XXXnnnnXXn.
+[31]Incorrect value: [;AD] should be in form XXX.
+[32]Incorrect value: [~AN] should be in form XXX.
+[33]Incorrect value: [yEK] should be in form XXX.
+[34]Incorrect value: [] should be in form XXXnnnnXXn.
+[35]Incorrect value: [] should be in form XXXnnnnXXn.
+[36]Incorrect value: [vEN] should be in form XXX.
+[37]Incorrect value: [] should be in form XXXnnnnXXn.
+[38]Executed in: 43ms.

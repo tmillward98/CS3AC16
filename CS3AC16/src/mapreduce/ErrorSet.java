@@ -8,6 +8,12 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * All error handling is done within this class.
+ * The Regexes and look-up table are defined within this class, as well as their corresponding functions
+ * @author Tom
+ *
+ */
 public class ErrorSet {
 	
 	private ArrayList<String> PassengerID;
@@ -38,7 +44,7 @@ public class ErrorSet {
 
 			while ((line = reader.readLine()) != null) {
 				values = line.split(",");
-				if (PassengerID == null) {
+				if (PassengerID.isEmpty()) {
 					PassengerID.add(values[0]);
 					FlightID.add(values[1]);
 					fromAirport.add(values[2]);
@@ -122,43 +128,90 @@ public class ErrorSet {
 		  }
 	}
 	
-	public boolean compareUniques(String[] values) {
-		
+	private boolean comparePID(String values) {
 		for(int i = 0; i < PassengerID.size(); i++) {
-			
+			if(values.equals(PassengerID.get(i))) {
+				return true;
+			}
 		}
-		
-		return true;
+		return false;
 	}
 	
-	public boolean regexCompare(String[] values) {
+	private boolean compareFID(String values) {
+		for(int i = 0; i < FlightID.size(); i++) {
+			if(values.equals(FlightID.get(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean compareFA(String values) {
+		for(int i = 0; i < fromAirport.size(); i++) {
+			if(values.equals(fromAirport.get(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private boolean compareTA(String values) {
+		for(int i = 0; i < toAirport.size(); i++) {
+			if(values.equals(toAirport.get(i))) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean compareValues(String values[]) {
+		if(!comparePID(values[0]) || !compareFID(values[1]) || !compareFA(values[2]) || !compareTA(values[3])) {
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+		
+	public boolean regexCompare(String[] values, ErrorReport report) {
 		
 		//Fits format XXXnnnnXXn
 		Matcher m = f1.matcher(values[0]);
 		if(!m.matches()) {
-			System.out.println("Incorrect syntax: " + values[0]);
+			report.addToReport("Incorrect value: [" + values[0] + "] should be in form XXXnnnnXXn.");
 			return false;
 		}
 		
 		//Fits format XXXnnnnX
 		m = f2.matcher(values[1]);
 		if(!m.matches()) {
-			System.out.println("Incorrect syntax: " + values[1]);
+			report.addToReport("Incorrect value: [" + values[1] + "] should be in form XXXnnnnX.");
 			return false;
 		}
 		
 		//Reusable for 2 and 3
 		m = f3.matcher(values[2]);
 		if(!m.matches()) {
-			System.out.println("Incorrect syntax: " + values[2]);
+			report.addToReport("Incorrect value: [" + values[2] + "] should be in form XXX.");
 			return false;
 		}
 		
 		m = f3.matcher(values[3]);
 		if(!m.matches()) {
-			System.out.println("Incorrect syntax: " + values[3]);
+			report.addToReport("Incorrect value: [" + values[3] + "] should be in form XXX.");
 			return false;
 		}
+		
+		if(values[4].length() != 10) {
+			report.addToReport("Incorrect value: [" + values[4] + "] should be in form n[10].");
+			return false;
+		}
+		
+		if(values[5].length() > 4 || values[4].length() == 0){
+			report.addToReport("Incorrect value: [" + values[5] + "] should be in form n[1-4]");
+			return false;
+		}
+		
 		
 		return true;
 	}

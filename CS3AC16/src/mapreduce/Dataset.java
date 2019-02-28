@@ -3,6 +3,11 @@ package mapreduce;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Used to house object for key-value pairs
+ * @author Tom
+ *
+ */
 public class Dataset {
 
 	
@@ -14,7 +19,10 @@ public class Dataset {
 	public int flightTime;
 	
 	
-	
+	/**
+	 * Constructor
+	 * @param values - Values to be placed inside the housed variables
+	 */
 	Dataset(String[] values){
 		passengerID = values[0];
 		flightID = values[1];
@@ -22,25 +30,6 @@ public class Dataset {
 		toAirport = values[3];
 		depTime = values[4];
 		flightTime = Integer.parseInt(values[5]);
-	}
-	
-	/**
-	 * Each field has a unique set of requirements that it must adhere to
-	 * Given the values do not adhere to these standards, return false
-	 * Else return true
-	 * @param values	- Set of values to check
-	 * @return
-	 */
-	public boolean CheeckForErrors(String[] values) {
-		return true;
-	}
-	
-	public ArrayList<Dataset> uniqueValues(ArrayList<Dataset> a) {
-		
-		
-		
-		ArrayList<Dataset> b = new ArrayList<Dataset>();
-		return b;
 	}
 	
 	
